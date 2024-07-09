@@ -1,2 +1,9 @@
 const withMDX = require('@next/mdx')({ extension: /\.mdx?$/ })
-module.exports = withMDX({ pageExtensions: ['js', 'jsx', 'mdx'] })
+
+const nextConfig = {
+    output: "export",
+    reactStrictMode: true,
+    pageExtensions: ['js', 'jsx', 'mdx']
+};
+
+module.exports = withMDX(nextConfig)

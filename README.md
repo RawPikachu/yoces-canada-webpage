@@ -4,6 +4,7 @@ Webpage for the organization, forked from [Hackclub Theme Starter](https://githu
 
 ## Usage
 
-1. `yarn` to install dependencies.
-2. `yarn dev` to start your server.
-3. `yarn dev -p 5000` to run on another port.
+1. `pnpm` to install dependencies.
+2. `pnpm build` to build static webpage for GitHub Pages.
+3. `pnpm dev` to start your server.
+4. `pnpm dev -p 5000` to run on another port.
