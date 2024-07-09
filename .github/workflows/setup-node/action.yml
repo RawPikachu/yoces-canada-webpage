@@ -3,19 +3,16 @@ description: "Setup Node.js ⚙️ - Cache dependencies ⚡ - Install dependenci
 runs:
   using: "composite"
   steps:
-    - name: Setup Node.js ⚙️
+    - name: Setup pnpm ⚙️
+      uses: pnpm/action-setup@v2
+
+    - name: Setup Node.js & Cache dependencies ⚙️
       uses: actions/setup-node@v4
       with:
         node-version: 20
-
-    - name: Cache dependencies ⚡
-      id: cache_dependencies
-      uses: actions/cache@v3
-      with:
-        path: node_modules
-        key: node-modules-${{ hashFiles('package-lock.json') }}
+        cache: "pnpm"
+        cache-dependency-path: "./pnpm-lock.yaml"
 
     - name: Install dependencies 🔧
       shell: bash
-      if: steps.cache_dependencies.outputs.cache-hit != 'true'
-      run: npm ci
+      run: pnpm ci
