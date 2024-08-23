@@ -27,7 +27,7 @@ const Navbar = (props) => {
             sx={{ height: 48, textAlign: 'left' }}
           />
           <Box />
-          <NavLink href="https://yoces.ca/hackathon">
+          <NavLink href="https://hackathon.yoces.ca">
             Hackathon
           </NavLink>
           <NavLink href="mailto:youthoces@gmail.com">
